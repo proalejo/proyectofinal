@@ -1,0 +1,53 @@
+/**{color: white;}
+*/
+h5 {padding: 20px;
+margin-top: 80px;
+/*background-color: #7c7c7c;*/
+text-align: right;}
+
+footer .redes-sociales {
+	/*color: #fff;	
+	*/margin: 25px 40px;
+	display: inline-flex;
+list-style-type: none;
+font-size: 40px;
+letter-spacing: 60px;
+text-align: center;
+	}
+
+ul .redes-sociales {text-align: center;
+	background-color: gray;
+	}
+
+footer {background-color: #7c7c7c;}
+
+.logo{margin-top: -20px;}
+
+
+
+
+footer .redes-sociales .twitter:hover { color: white;}
+footer .redes-sociales .facebook:hover { color: white; }
+footer .redes-sociales .youtube:hover {color: white; }
+footer .redes-sociales .instagram:hover { color: white; }
+
+.btn btn-primary btn-block {margin-bottom: 20px;}
+
+#nosotros {text-align: center;
+font-size: 60px;
+margin-top: 40px;
+margin-bottom: 50px;}
+
+#intro {text-align: center;
+font-size: 15px;
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+
+
+h4 {text-align: center;
+font-size: 20px;}
+
+p{text-align: center;
+font-size: 15px;}
