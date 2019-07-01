@@ -12,10 +12,7 @@
     
   </head>
   <body>
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			
+    
 
 			<?php
 			include("nav.php")
@@ -44,7 +41,11 @@
     <?php
       include("footer.php")
       ?>
+    
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 

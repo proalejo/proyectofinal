@@ -12,9 +12,7 @@
     
   </head>
   <body>
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
+   
 			
 
 			<?php
@@ -29,7 +27,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" alt="Bootstrap Thumbnail First" src="https://www.layoutit.com/img/people-q-c-600-200-1.jpg" />
+            <img class="card-img-top" alt="Muebles" src="images/mueble.jpeg"/>
             <div class="card-block">
               <h4 class="card-title">
                 Muebles
@@ -45,7 +43,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="https://www.layoutit.com/img/city-q-c-600-200-1.jpg" />
+            <img class="card-img-top" alt="Ropa" src="images/ropa.jpeg"/>
             <div class="card-block">
               <h4 class="card-title">
                 Ropa
@@ -61,7 +59,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="https://www.layoutit.com/img/sports-q-c-600-200-1.jpg" />
+            <img class="card-img-top" alt="Alimentos" src="images/alimentos.jpeg"/>
             <div class="card-block">
               <h4 class="card-title">
                 Alimentos
@@ -93,6 +91,12 @@
     <?php
       include("footer.php")
       ?>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 

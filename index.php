@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Don-Arte</title>   
-    <link rel="stylesheet" href="css/normalize.css">
+    
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
+  
 			
 
 			<?php
@@ -22,7 +20,7 @@
 			?>
 
 
-
+<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="carousel slide" id="carousel-960339">
@@ -68,11 +66,15 @@
 				</div>
 			</div>
 		
-
+</div>
 		<?php
 			include("footer.php")
-			?>
+			?>	
 
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 

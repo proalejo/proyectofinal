@@ -19,11 +19,11 @@ ul .redes-sociales {text-align: center;
 	background-color: gray;
 	}
 
-footer {background-color: #7c7c7c;}
+footer {background-color: #7c7c7c;
+width: 100%;}
 
-.logo{margin-top: -20px;}
-
-
+.logo {width: 100px;
+	margin-top: 0px;}
 
 
 footer .redes-sociales .twitter:hover { color: white;}
@@ -36,13 +36,13 @@ footer .redes-sociales .instagram:hover { color: white; }
 #nosotros {text-align: center;
 font-size: 60px;
 margin-top: 40px;
-margin-bottom: 50px;}
+margin-bottom: 50px;
+}
 
 #intro {text-align: center;
 font-size: 15px;
 margin-top: 50px;
 margin-bottom: 50px;
-
 }
 
 
@@ -51,3 +51,24 @@ font-size: 20px;}
 
 p{text-align: center;
 font-size: 15px;}
+
+
+@media screen and (max-width: 500px) 
+	{
+	footer .redes-sociales {
+	/*color: #fff;	
+	*/margin: 25px 40px;
+	display: inline-flex;
+	list-style-type: none;
+	font-size: 20px;
+	letter-spacing: 30px;
+	text-align: center;
+	}
+
+	h5 {padding: 20px;
+	margin-top: 80px;
+	text-align: left;}
+
+
+
+}
