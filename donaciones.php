@@ -36,7 +36,7 @@
                Usados en buen estado o para restaurar.
               </p>
               <p>
-                <a class="btn btn-primary" href="#">Entrar</a>
+                <a class="btn btn-primary" href="muebles.php">Entrar</a>
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@
                 Usada en condiciones.
               </p>
               <p>
-                <a class="btn btn-primary" href="#">Entrar</a>
+                <a class="btn btn-primary" href="ropa.php">Entrar</a>
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@
                 Alimentos no perecederos
               </p>
               <p>
-                <a class="btn btn-primary" href="#">Entrar</a>
+                <a class="btn btn-primary" href="alimentos.php">Entrar</a>
               </p>
             </div>
           </div>
