@@ -20,6 +20,7 @@
 			include("nav.php")
 			?>
 
+<br>
 
 <div class="container">
 		<div class="row mt-3">
@@ -46,6 +47,7 @@
 
 </div>
 
+<br>
 
 		<?php
 			include("footer.php")

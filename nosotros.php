@@ -25,7 +25,9 @@
             <h1 id="nosotros">Nosotros</h1>
 
 
-        <p id="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora similique velit mollitia, tempore! Nobis odio, non porro distinctio, hic magni possimus quod aut dolorem ipsam quo voluptatem, fuga. Magnam, unde.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem distinctio fuga, ipsam quam consequatur incidunt reprehenderit aperiam doloribus eos nulla obcaecati quae, architecto voluptatum laborum labore ut repudiandae commodi, porro.</p>
+        <p id="intro">Somos una fundación sin fines de lucro, con ganas de incursionar en el arte de donar. Queremos que todos los que necesiten algo lo tengan, sin necesidad de invertir nada solo esfuerzo y ganas de demostrar porque deberían recibir ese producto. 
+        Hoy esta pagina inicia como un proyecto final de un curso de desarrollador full stack para <strong>COMUNIDADIT</strong>, pero quiero que crezca y se conozca. 
+        Aquí contaremos historias de vida de personas reales, como vos y como yo, que hoy en día necesitan algo o quieren ayudar a alguien!</p>
 
 
 
