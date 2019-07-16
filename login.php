@@ -1,3 +1,8 @@
+<?php
+
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -14,22 +19,56 @@
   </head>
   <body>
     
-			
+	
+	<?php
 
-			<?php
-			include("nav.php")
-			?>
+		include "helpers/database_helper.php";
+
+		if ( isset($_REQUEST["Email"] ) && isset($_REQUEST["password"] ) )
+		{
+
+			$conexion = getConexion();
+
+	        $consulta = "SELECT * " . 
+	                    "FROM usuarios " .
+	                    "WHERE email = '" . $_REQUEST["Email"] . "'" .
+	                    " AND contraseña = '" . $_REQUEST["password"] . "'";
+
+	        $resultado = $conexion->query( $consulta );
+
+
+	        if ( $resultado->num_rows == 1  ){
+
+	            //Obtengo el nombre del usuario
+
+	            $usuario = $resultado->fetch_assoc();
+
+	            $_SESSION["usuario"] = $usuario["nombre_usuario"];
+	            $_SESSION["id_usuario"] = $usuario["id"];
+	            
+			}
+			else{
+				echo "LOGIN INCORRECTO";
+			}
+		}
+
+	?>
+
+
+	<?php
+	include("nav.php")
+	?>
 
 <br>
 
 <div class="container">
 		<div class="row mt-3">
 			<div class="col">
-				<form action="">
+				<form action="" method="GET">
 					
 					<div class="form-group">
 						<label for="nombre">Email</label>
-						<input type="Email" class="form-control" placeholder="Email" name="Email" id="Email">
+						<input type="text" class="form-control" placeholder="Email" name="Email" id="Email">
 					</div>
 					<div class="form-group">
 						<label for="password">Contraseña</label>

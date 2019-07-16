@@ -13,6 +13,24 @@
   </head>
   <body>
    
+		<?php
+
+		include "helpers/database_helper.php";
+
+		if ( isset($_REQUEST["Email"] ) && isset($_REQUEST["password"] ) )
+		{
+
+			$conexion = getConexion();
+
+	        $registro = INSERT INTO 'usuarios' ('id', 'nombre_usuario', 'contraseña', 'email'); 
+
+	        $resultado = $conexion->query( $consulta );
+
+
+		  
+
+		 ?>
+
 			
 
 			<?php
@@ -23,7 +41,7 @@
 <div class="container">
 		<div class="row mt-3">
 			<div class="col">
-				<form action="">
+				<form action="" method="GET">
 					<div class="form-group">
 						<label for="nombre">Nombre</label>
 						<input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">

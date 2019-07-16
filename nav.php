@@ -25,8 +25,22 @@
 					</form>
 					<ul class="navbar-nav ml-md-auto">
 							<li class="nav-item dropdown">
-							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Cuenta</a>
+							 
+
+							<?php
+								$label = "Cuenta";
+
+								if ( isset($_SESSION["usuario"]) ){
+									$label = $_SESSION["usuario"];
+								}
+							?>
+
+							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><?=$label?></a>
+
+
+
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+
 								 <a class="dropdown-item" href="login.php">Login</a>
 								 <a class="dropdown-item" href="registro.php">Registro</a> 
 								 <div class="dropdown-divider">

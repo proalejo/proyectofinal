@@ -3,7 +3,7 @@
 	define( 'HOST' , 'localhost' );
 	define( 'USER' , 'root' );
 	define( 'PASSWORD' , '' );
-	define( 'BD' , 'proyectofinal' );
+	define( 'BD' , 'donarte' );
 
 	function getConexion(){
 		
