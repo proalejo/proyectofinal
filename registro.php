@@ -17,15 +17,20 @@
 
 		include "helpers/database_helper.php";
 
-		if ( isset($_REQUEST["Email"] ) && isset($_REQUEST["password"] ) )
+		if ( isset($_POST["Enviar"] ) )
 		{
 
 			$conexion = getConexion();
 
-	        $registro = INSERT INTO 'usuarios' ('id', 'nombre_usuario', 'contraseña', 'email'); 
+	        $registro = 'INSERT INTO usuarios ('id', 'nombre_usuario', 'contraseña', 'email')'; 
 
 	        $resultado = $conexion->query( $consulta );
 
+	        if ($conexion->query{$registro} === true) {
+
+	        	echo 'REGISTRO CORRECTO';
+	        	# code...
+	        }
 
 		  
 
@@ -41,7 +46,7 @@
 <div class="container">
 		<div class="row mt-3">
 			<div class="col">
-				<form action="" method="GET">
+				<form action="registro.php" method="POST">
 					<div class="form-group">
 						<label for="nombre">Nombre</label>
 						<input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
@@ -84,7 +89,7 @@
 						</label>
 					</div>
 
-					<input type="submit" class="btn btn-primary btn-block" value="Enviar">
+					<input type="submit" class="btn btn-primary btn-block" name="Enviar" value="Enviar">
 					<br>
 				</form>
 			</div>
