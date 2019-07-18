@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -25,16 +30,14 @@
   <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="Campera" id="prod_image" src="images/campera.jpg"/>
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Campera de Cuero
         </dt>        
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        <dd class="mt-5">
+          Campera de cuero en buen estado.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
@@ -42,17 +45,15 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="zapatos" id="prod_image" src="images/zapatos.jpg" />
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Zapatos Negros
         </dt>
         
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        <dd class="mt-5">
+          Zapatos Negros Nº42 listos para usar.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
@@ -60,17 +61,15 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="camisa" id="prod_image" src="images/camisa.jpg" />
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Camisa Azul
         </dt>
         
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        <dd class="mt-5">
+          Camisa Azul talle L manga corta.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">

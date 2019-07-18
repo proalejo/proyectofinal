@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -25,16 +30,14 @@
   <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+      <img alt="Sillon" id="prod_image" src="images/sillon.jpg"/>
       <dl>
-        <dt>
-          Description lists
+        <dt class="mt-5">
+          Sillon
         </dt>        
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        <dd class="mt-5">
+          Sillon en buen estado tapizado nuevo.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
@@ -42,17 +45,15 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="Silla" id="prod_image" src="images/silla.jpg"/>
+
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Silla
         </dt>
-        
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      
+        <dd class="mt-5">
+          Silla En Buen Estado con 6 años de antiguedad
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
@@ -60,17 +61,14 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="Mesa" id="prod_image" src="images/mesa.jpg"/>
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Mesa
         </dt>
         
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        <dd class="mt-5">
+          Mesa 4 patas en buen estado para pintar.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">

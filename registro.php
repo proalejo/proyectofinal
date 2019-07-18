@@ -1,3 +1,8 @@
+<?php
+	session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,7 +18,7 @@
   </head>
   <body>
    
-		<?php
+		 <?php
 
 		include "helpers/database_helper.php";
 
@@ -22,7 +27,7 @@
 
 			$conexion = getConexion();
 
-	        $registro = 'INSERT INTO usuarios ('id','nombre_usuario','contraseña','email')'; 
+	        $registro = 'INSERT INTO usuarios (id, nombre_usuario, contraseña, email)'; 
 
 	        $resultado = $conexion->query( $consulta );
 
@@ -39,7 +44,7 @@
 			
 
 			<?php
-			include("nav.php")
+			include("nav.php");
 			?>
 
 
@@ -99,7 +104,7 @@
 
 
 		<?php
-			include("footer.php")
+			include("footer.php");
 			?>
 
 
@@ -110,4 +115,6 @@
 
 
   </body>
+
+
 </html>

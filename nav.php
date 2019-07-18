@@ -43,7 +43,7 @@
 								 <a class="dropdown-item" href="login.php">Login</a>
 								 <a class="dropdown-item" href="registro.php">Registro</a> 
 								 <div class="dropdown-divider">
-								</div> <a class="dropdown-item" href="index.php?m=logout">Cerrar Sesion</a>
+								</div> <a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
 							</div>
 						</li>
 					</ul>

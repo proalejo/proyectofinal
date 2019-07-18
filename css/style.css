@@ -51,6 +51,13 @@ font-size: 20px;}
 p{text-align: center;
 font-size: 15px;}
 
+#prod_image {
+	width: 200px;
+	height: 200px;
+	display: block;
+	margin: auto;
+}
+
 
 @media screen and (max-width: 500px) 
 	{
