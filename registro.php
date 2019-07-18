@@ -22,7 +22,7 @@
 
 			$conexion = getConexion();
 
-	        $registro = 'INSERT INTO usuarios ('id', 'nombre_usuario', 'contraseña', 'email')'; 
+	        $registro = 'INSERT INTO usuarios ('id','nombre_usuario','contraseña','email')'; 
 
 	        $resultado = $conexion->query( $consulta );
 

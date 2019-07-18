@@ -36,15 +36,14 @@
 							?>
 
 							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><?=$label?></a>
-
-
+							
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 
 								 <a class="dropdown-item" href="login.php">Login</a>
 								 <a class="dropdown-item" href="registro.php">Registro</a> 
 								 <div class="dropdown-divider">
-								</div> <a class="dropdown-item" href="#">Cerrar Sesion</a>
+								</div> <a class="dropdown-item" href="index.php?m=logout">Cerrar Sesion</a>
 							</div>
 						</li>
 					</ul>
