@@ -30,16 +30,15 @@
   <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="camisa" id="prod_image" src="images/leche.jpg" />
+      <dl class="mt-5">
         <dt>
-          Description lists
-        </dt>        
-        <dt>
-          Felis euismod semper eget lacinia
+          Leche Nido
         </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        
+        <dd class="mt-5">
+          Leche Nido Vencimiento 27/05/2021
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
@@ -47,17 +46,15 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="camisa" id="prod_image" src="images/arroz.jpg" />
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Arroz
         </dt>
         
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        <dd class="mt-5">
+          Arroz largo fino Vencimiento 02/07/2020.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
@@ -65,17 +62,15 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-      <dl>
+      <img alt="camisa" id="prod_image" src="images/arvejas.jpg" />
+      <dl class="mt-5">
         <dt>
-          Description lists
+          Arvejas
         </dt>
         
-        <dt>
-          Felis euismod semper eget lacinia
-        </dt>
-        <dd>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        
+        <dd class="mt-5">
+          Arvejas en lata Vencimiento 10/10/2020.
         </dd>
       </dl> 
       <button type="button" class="btn btn-success">
