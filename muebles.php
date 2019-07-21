@@ -10,9 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Don-Arte</title>   
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet">
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
   </head>
@@ -30,7 +31,7 @@
   <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <img alt="Sillon" id="prod_image" src="images/sillon.jpg"/>
+      <img alt="Sillon" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/sillon.jpg"/>
       <dl>
         <dt class="mt-5">
           Sillon
@@ -45,7 +46,7 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Silla" id="prod_image" src="images/silla.jpg"/>
+      <img alt="Silla" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/silla.jpg"/>
 
       <dl class="mt-5">
         <dt>
@@ -61,7 +62,7 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="Mesa" id="prod_image" src="images/mesa.jpg"/>
+      <img alt="Mesa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/mesa.jpg"/>
       <dl class="mt-5">
         <dt>
           Mesa

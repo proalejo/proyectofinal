@@ -9,10 +9,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Don-Arte</title>   
+    <title>Don-Arte</title>
+     <link href="css/style.css" rel="stylesheet">   
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
   </head>
@@ -26,26 +26,26 @@
 
 
       <br>
-      <div class="container-fluid">
+
   <div class="container-fluid">
-  <div class="row">
+      <div class="row">
+         <div class="col-md-4">
+          <img alt="Campera" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/campera.jpg"/>
+          <dl class="mt-5">
+            <dt>
+              Campera de Cuero
+            </dt>        
+            
+            <dd class="mt-5">
+              Campera de cuero en buen estado.
+            </dd>
+          </dl> 
+          <button type="button" class="btn btn-success">
+            Lo Necesito
+          </button>
+        </div>
     <div class="col-md-4">
-      <img alt="Campera" id="prod_image" src="images/campera.jpg"/>
-      <dl class="mt-5">
-        <dt>
-          Campera de Cuero
-        </dt>        
-        
-        <dd class="mt-5">
-          Campera de cuero en buen estado.
-        </dd>
-      </dl> 
-      <button type="button" class="btn btn-success">
-        Lo Necesito
-      </button>
-    </div>
-    <div class="col-md-4">
-      <img alt="zapatos" id="prod_image" src="images/zapatos.jpg" />
+      <img alt="zapatos" id="prod_image"  style="max-height: 200px; max-width: 200px;" src="images/zapatos.jpg" />
       <dl class="mt-5">
         <dt>
           Zapatos Negros
@@ -61,7 +61,7 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="camisa" id="prod_image" src="images/camisa.jpg" />
+      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/camisa.jpg" />
       <dl class="mt-5">
         <dt>
           Camisa Azul

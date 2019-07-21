@@ -30,7 +30,7 @@
   <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <img alt="camisa" id="prod_image" src="images/leche.jpg" />
+      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/leche.jpg" />
       <dl class="mt-5">
         <dt>
           Leche Nido
@@ -46,7 +46,7 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="camisa" id="prod_image" src="images/arroz.jpg" />
+      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/arroz.jpg" />
       <dl class="mt-5">
         <dt>
           Arroz
@@ -62,7 +62,7 @@
       </button>
     </div>
     <div class="col-md-4">
-      <img alt="camisa" id="prod_image" src="images/arvejas.jpg" />
+      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/arvejas.jpg" />
       <dl class="mt-5">
         <dt>
           Arvejas
