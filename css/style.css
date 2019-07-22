@@ -1,5 +1,5 @@
-/**{color: white;}
-*/
+*{margin: -15px;
+/*padding: 0px;*/}
 h5 {padding: 20px;
 margin-top: 80px;
 /*background-color: #7c7c7c;*/
@@ -36,14 +36,15 @@ footer .redes-sociales .instagram:hover { color: white; }
 #nosotros {text-align: center;
 font-size: 60px;
 margin-top: 60px;
-margin-bottom: 50px;
+margin-bottom: 40px;
 
 }
 
 #intro {text-align: center;
 font-size: 20px;
-margin-top: 70px;
-margin-bottom: 70px;
+margin-top: 40px;
+margin-bottom: 40px;
+padding: 30px;
 }
 
 h4 {text-align: center;

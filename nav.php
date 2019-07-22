@@ -40,10 +40,23 @@
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 
-								 <a class="dropdown-item" href="login.php">Login</a>
-								 <a class="dropdown-item" href="registro.php">Registro</a> 
-								 <div class="dropdown-divider">
-								</div> <a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
+								<?php
+									if ( !isset($_SESSION["usuario"]) ){
+								?>
+									<a class="dropdown-item" href="login.php">Login</a>
+								 	<a class="dropdown-item" href="registro.php">Registro</a> 
+								 	
+								<?php
+								}
+								else {
+								?>
+									<a class="dropdown-item" href="#">Donar</a>
+								 	<a class="dropdown-item" href="#">Mis Donaciones</a> 	
+
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
+								<?php }
+								?>
 							</div>
 						</li>
 					</ul>

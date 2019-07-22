@@ -33,7 +33,7 @@
 	        $consulta = "SELECT * " . 
 	                    "FROM usuarios " .
 	                    "WHERE email = '" . $_REQUEST["Email"] . "'" .
-	                    " AND contraseña = '" . $_REQUEST["password"] . "'";
+	                  " AND password = '" . $_REQUEST["password"] . "'";
 
 	        $resultado = $conexion->query( $consulta );
 
@@ -73,7 +73,7 @@
 					</div>
 					<div class="form-group">
 						<label for="password">Contraseña</label>
-						<input type="password" class="form-control" placeholder="password" name="password" id="password">
+						<input type="password" class="form-control" placeholder="Password" name="password" id="password">
 					</div>
 					
 					

@@ -38,7 +38,7 @@
 	        }
 
 		  
-
+	        }
 		 ?>
 
 			
@@ -61,33 +61,16 @@
 						<input type="Email" class="form-control" placeholder="Email" name="Email" id="Email">
 					</div>
 					<div class="form-group">
+						<label for="direccion">Direccion</label>
+						<input type="text" class="form-control" placeholder="Direccion" name="direccion" id="direccion">
+					</div>
+
+					<div class="form-group">
 						<label for="password">Contraseña</label>
-						<input type="password" class="form-control" placeholder="password" name="password" id="password">
+						<input type="password" class="form-control" placeholder="Password" name="password" id="password">
 					</div>
 					
-					<div class="form-group">
-						<label for="pais">Pais</label>
-						<select name="pais" id="pais" class="form-control">
-							<option value="Argentina">Argentina</option>
-							<option value="Uruguay">Uruguay</option>
-							<option value="Paraguay">Paraguay</option>
-							<option value="Bolivia">Bolivia</option>
-							<option value="Peru">Peru</option>
-							<option value="Colombia">Colombia</option>
-							<option value="Venezuela">Venezuela</option>
-							<option value="Mexico">Mexico</option>
-						</select>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="radio" name="sexo" id="hombre" class="form-check-input mr-2">Hombre
-						</label>
-					</div>
-					<div class="form-check">
-						<label class="form-check-label">
-							<input type="radio" name="sexo" id="mujer" class="form-check-input mr-2">Mujer
-						</label>
-					</div>
+									
 					<div class="form-check mb-3">
 						<label class="form-check-label">
 							<input type="checkbox" name="terminos" id="terminos" class="form-check-input mr-2">Acepto Terminos y Condiciones
