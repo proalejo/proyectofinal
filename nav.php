@@ -50,7 +50,7 @@
 								}
 								else {
 								?>
-									<a class="dropdown-item" href="#">Donar</a>
+									<a class="dropdown-item" href="donar.php">Donar</a>
 								 	<a class="dropdown-item" href="#">Mis Donaciones</a> 	
 
 									<div class="dropdown-divider"></div>
