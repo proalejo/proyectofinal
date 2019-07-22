@@ -47,6 +47,8 @@
 	            $_SESSION["usuario"] = $usuario["nombre_usuario"];
 	            $_SESSION["id_usuario"] = $usuario["id"];
 	            
+	            header("Location: index.php");
+
 			}
 			else{
 				echo "LOGIN INCORRECTO";

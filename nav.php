@@ -3,7 +3,7 @@
 		<div class="col-md-12">
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">				 
+			<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">				 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="navbar-toggler-icon"></span>
 				</button> <a class="navbar-brand" href="index.php"><img src="images/logo.png" class="logo"alt="Logo"></a>

@@ -18,7 +18,7 @@
   </head>
   <body>
    
-		 <?php
+		<?php
 
 		include "helpers/database_helper.php";
 
@@ -27,19 +27,24 @@
 
 			$conexion = getConexion();
 
-	        $registro = 'INSERT INTO usuarios (id, nombre_usuario, contraseña, email)'; 
+	        $registro = 'INSERT INTO usuarios (nombre_usuario, password, email, direccion) ' . 
+	        			"VALUES('" . $_POST["nombre"] . "'" .
+	        			", '" . $_POST["password"] . "'" .
+	        			", '" . $_POST["Email"] . "'" .
+	        			", '" . $_POST["direccion"] . "')";
 
-	        $resultado = $conexion->query( $consulta );
 
-	        if ($conexion->query{$registro} === true) {
+	        $resultado = $conexion->query( $registro );
+
+	        if ($resultado) {
 
 	        	echo 'REGISTRO CORRECTO';
 	        	# code...
 	        }
 
 		  
-	        }
-		 ?>
+	    }
+	  	?>
 
 			
 
