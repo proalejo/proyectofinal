@@ -19,7 +19,7 @@
 					</ul>
 					<form class="form-inline">
 						<input class="form-control mr-sm-2" type="text"> 
-						<button class="btn btn-primary my-2 my-sm-0" type="submit">
+						<button onclick="enviarBusqueda();" name="submit" type="button"  class="btn btn-primary my-2 my-sm-0">
 							Buscar
 						</button>
 					</form>
@@ -66,3 +66,20 @@
 		</div>
 	</div>
 </div>
+
+
+
+ <script type="text/javascript">
+    	
+    	function enviarBusqueda(){
+    		
+			var urlBusqueda = 'index.php?buscar=' + $("#buscar").val() +
+							  '&categoria=' + $("#categoria").val() + 
+							  '&orden=' + $("#orden").val();
+
+			window.setTimeout( window.location = urlBusqueda, 100 );	
+
+	    }
+
+
+    </script>

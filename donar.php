@@ -46,6 +46,17 @@
                 </label>
                 <input type="text" class="form-control" id="inputdescrip" />
               </div>
+              
+              <select name="categoria">
+                 <option value="1">Muebles</option> 
+                 <option value="2">Ropa</option> 
+                 <option value="3">Alimentos</option>
+                  
+              </select>          
+
+
+
+
               <div class="form-group">
                  
                 <label for="exampleInputFile">
