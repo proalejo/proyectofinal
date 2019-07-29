@@ -1,8 +1,6 @@
-      
-
-      <?php
-      include("nav.php")
-      ?>
+<?php
+include("nav.php")
+?>
 
 
       <br>
