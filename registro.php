@@ -1,5 +1,4 @@
-   
-		<?php
+<?php
 
 		include "helpers/database_helper.php";
 
@@ -70,7 +69,7 @@
 									
 					<div class="form-check mb-3">
 						<label class="form-check-label">
-							<input type="checkbox" name="terminos" id="terminos" class="form-check-input mr-2">Acepto Terminos y Condiciones
+							<input type="checkbox" name="terminos" id="terminos" class="form-check-input mr-2" required="required">Acepto Terminos y Condiciones
 						</label>
 					</div>
 
