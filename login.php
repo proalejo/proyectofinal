@@ -2,6 +2,9 @@
 
 		include "helpers/database_helper.php";
 
+	include("nav.php");
+
+
 		if ( isset($_REQUEST["Email"] ) && isset($_REQUEST["password"] ) )
 		{
 
@@ -35,9 +38,7 @@
 	?>
 
 
-	<?php
-	include("nav.php")
-	?>
+	
 
 <br>
 
