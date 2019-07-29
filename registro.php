@@ -1,24 +1,3 @@
-<?php
-	session_start();
-?>
-
-
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Don-Arte</title>   
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-  </head>
-  <body>
    
 		<?php
 
@@ -29,21 +8,32 @@
 
 			$conexion = getConexion();
 
-	        $registro = 'INSERT INTO usuarios (nombre_usuario, password, email, direccion) ' . 
-	        			"VALUES('" . $_POST["nombre"] . "'" .
-	        			", '" . $_POST["password"] . "'" .
-	        			", '" . $_POST["Email"] . "'" .
-	        			", '" . $_POST["direccion"] . "')";
+			$sql = "SELECT * FROM usuarios WHERE email = '" . $_POST["Email"] ."'";
+
+			$resultado = $conexion->query( $sql );
+
+			 if ( $resultado->num_rows == 1  ){
+
+			 	echo "EMAIL YA REGISTRADO";
+			 }
+
+			 else {
+
+		        $registro = 'INSERT INTO usuarios (nombre_usuario, password, email, direccion) ' . 
+		        			"VALUES('" . $_POST["nombre"] . "'" .
+		        			", '" . $_POST["password"] . "'" .
+		        			", '" . $_POST["Email"] . "'" .
+		        			", '" . $_POST["direccion"] . "')";
 
 
-	        $resultado = $conexion->query( $registro );
+		        $resultado = $conexion->query( $registro );
 
-	        if ($resultado) {
+		        if ($resultado) {
 
-	        	echo 'REGISTRO CORRECTO';
-	        	# code...
-	        }
-
+		        	echo 'REGISTRO CORRECTO';
+		        	# code...
+		        }
+			}
 		  
 	    }
 	  	?>
