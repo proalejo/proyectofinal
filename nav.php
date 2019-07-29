@@ -51,7 +51,7 @@
 								else {
 								?>
 									<a class="dropdown-item" href="donar.php">Donar</a>
-								 	<a class="dropdown-item" href="#">Mis Donaciones</a> 	
+								 	<a class="dropdown-item" href="misdonaciones.php">Mis Donaciones</a> 	
 
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
@@ -73,7 +73,7 @@
     	
     	function enviarBusqueda(){
     		
-			var urlBusqueda = 'index.php?buscar=' + $("#buscar").val() +
+			var urlBusqueda = 'resultado.php?buscar=' + $("#buscar").val() +
 							  '&categoria=' + $("#categoria").val() + 
 							  '&orden=' + $("#orden").val();
 

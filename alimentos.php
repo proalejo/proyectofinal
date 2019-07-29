@@ -10,6 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Don-Arte</title>   
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
@@ -27,57 +29,58 @@
 
       <br>
       <div class="container-fluid">
-  <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/leche.jpg" />
-      <dl class="mt-5">
-        <dt>
-          Leche Nido
-        </dt>
-        
-        
-        <dd class="mt-5">
-          Leche Nido Vencimiento 27/05/2021
-        </dd>
-      </dl> 
-      <button type="button" class="btn btn-success">
-        Lo Necesito
-      </button>
-    </div>
-    <div class="col-md-4">
-      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/arroz.jpg" />
-      <dl class="mt-5">
-        <dt>
-          Arroz
-        </dt>
-        
-        
-        <dd class="mt-5">
-          Arroz largo fino Vencimiento 02/07/2020.
-        </dd>
-      </dl> 
-      <button type="button" class="btn btn-success">
-        Lo Necesito
-      </button>
-    </div>
-    <div class="col-md-4">
-      <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/arvejas.jpg" />
-      <dl class="mt-5">
-        <dt>
-          Arvejas
-        </dt>
-        
-        
-        <dd class="mt-5">
-          Arvejas en lata Vencimiento 10/10/2020.
-        </dd>
-      </dl> 
-      <button type="button" class="btn btn-success">
-        Lo Necesito
-      </button>
-    </div>
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/leche.jpg" />
+            <dl class="mt-5">
+              <dt>
+                Leche Nido
+              </dt>
+              
+              
+              <dd class="mt-5">
+                Leche Nido Vencimiento 27/05/2021
+              </dd>
+            </dl> 
+            <button type="button" class="btn btn-success">
+              Lo Necesito
+            </button>
+          </div>
+          <div class="col-md-4">
+            <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/arroz.jpg" />
+            <dl class="mt-5">
+              <dt>
+                Arroz
+              </dt>
+              
+              
+              <dd class="mt-5">
+                Arroz largo fino Vencimiento 02/07/2020.
+              </dd>
+            </dl> 
+            <button type="button" class="btn btn-success">
+              Lo Necesito
+            </button>
+          </div>
+          <div class="col-md-4">
+            <img alt="camisa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/arvejas.jpg" />
+            <dl class="mt-5">
+              <dt>
+                Arvejas
+              </dt>
+              
+              
+              <dd class="mt-5">
+                Arvejas en lata Vencimiento 10/10/2020.
+              </dd>
+            </dl> 
+            <button type="button" class="btn btn-success">
+              Lo Necesito
+            </button>
+          </div>
   </div>
+  
   <br>
 
   <div class="row">

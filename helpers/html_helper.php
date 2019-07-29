@@ -1,9 +1,9 @@
 <?php
 
-function crearHTMLCardPublicacion($titulo, $descripcion, $imagen, $precio){
+function crearHTMLCardPublicacion($titulo, $descripcion, $imagen){
 ?>	
 
-  <div class="col-md-3 mb-4 text-center d-flex align-items-stretch"">
+  <div class="col-md-3 mb-4 text-center d-flex align-items-stretch">
 
 	<div class="card">
 		<div class="card-title mb-5 p-4">
@@ -17,7 +17,7 @@ function crearHTMLCardPublicacion($titulo, $descripcion, $imagen, $precio){
 		</div>
 	      
 	      <div class="card-footer">
-	    	  <?= $precio ?>
+	    	  <?= $descripcion ?>
 		  </div>
 
 	</div>
