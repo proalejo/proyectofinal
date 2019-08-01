@@ -3,9 +3,9 @@ include("nav.php")
 ?>
 
 
-      <br>
+      
 
-  <div class="container-fluid">
+  <div class="container-fluid mt-5">
       <div class="row">
          <div class="col-md-4">
           <img alt="Campera" id="prod_image" style="max-height: 200px; max-width: 200px;" src="images/campera.jpg"/>

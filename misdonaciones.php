@@ -3,17 +3,15 @@ include("nav.php")
 ?>
 
 
-      <br>
-
-
-				<div class="container-fluid">
+     
+			<div class="container-fluid mt-5">
 					<div class="row">
 						<div class="col-md-4">
 							 
-							<button type="button" class="btn btn-success">
+							<button type="button" name="modificar" class="btn btn-success">
 								Modificar
 							</button> 
-							<button type="button" class="btn btn-danger">
+							<button type="button" name="eliminar" class="btn btn-danger">
 								Eliminar
 							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
 							<dl>
@@ -48,10 +46,10 @@ include("nav.php")
 						</div>
 						<div class="col-md-4">
 							 
-							<button type="button" class="btn btn-success">
+							<button type="button" name="modificar" class="btn btn-success">
 								Modificar
 							</button> 
-							<button type="button" class="btn btn-danger">
+							<button type="button" name="eliminar" class="btn btn-danger">
 								Eliminar
 							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
 							<dl>
@@ -86,10 +84,10 @@ include("nav.php")
 						</div>
 						<div class="col-md-4">
 							 
-							<button type="button" class="btn btn-success">
+							<button type="button" name="modificar" class="btn btn-success">
 								Modificar
 							</button> 
-							<button type="button" class="btn btn-danger">
+							<button type="button" name="eliminar" class="btn btn-danger">
 								Eliminar
 							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
 							<dl>
@@ -154,6 +152,61 @@ include("nav.php")
 					</div>
 				</div>
 
+<?php 
+
+function buscarPublicacionesUsuario( $id_usuario ){
+        $conexion = getConexion();
+
+        $consulta = "SELECT pub_id, pub_producto, SUBSTRING(pub_descripcion, 1, 100) AS pub_descripcion, pub_id_categoria, pub_img, pub_id_usuario " . 
+                  "FROM publicaciones " . 
+                  "WHERE pub_id_usuario = " . $id_usuario;
+
+
+        $resultado = $conexion->query( $consulta );
+
+        return $resultado;
+    }
+
+
+
+function modificarPublicacion( $publicacion ){
+
+        $conexion = getConexion();
+
+        $sql = "UPDATE publicaciones SET " . 
+                    "pub_producto= \"" . $publicacion["producto"] . "\"" .
+                    ", pub_descripcion=\"" . $publicacion["descripcion"] . "\"". 
+                    ", pub_id_categoria=" . $publicacion["id_categoria"] .
+                    ", pub_img=" . $publicacion["img"] .
+                    ", pub_id_usuario=" . $publicacion["id_usuario"];
+
+        if ( $publicacion["imagen"] ){
+            $sql .= ", pub_imagen=\"" . $publicacion["imagen"] . "\"";
+        }
+        
+        $sql .= " WHERE pub_id = " . $publicacion["id"];
+
+
+
+        $conexion->query( $sql );
+
+
+
+    }
+
+
+    function eliminarPublicacion( $id_publicacion ){
+
+        $conexion = getConexion();
+
+        $sql = "DELETE FROM publicaciones " .         
+               " WHERE pub_id = " . $id_publicacion;
+
+        $resultado = $conexion->query( $sql );
+
+    }
+
+?>
 
 
 

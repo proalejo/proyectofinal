@@ -44,7 +44,7 @@
 			?>
 
 
-<div class="container">
+<div class="container mt-5">
 		<div class="row mt-3">
 			<div class="col">
 				<form action="registro.php" method="POST">
