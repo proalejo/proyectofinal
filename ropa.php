@@ -1,7 +1,6 @@
 <?php
 include("nav.php")
-?>      
-
+?> 
   <div class="container-fluid m-5">
     <div class="container-fluid">
       <div class="row">
