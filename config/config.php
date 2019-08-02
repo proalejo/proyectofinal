@@ -6,8 +6,6 @@
 
     define('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'] . "/" . SITE_FOLDER) ;
 
-
-
     define("PATH_VIEWS", SITE_ROOT . "/vistas");
 
     define("PATH_HELPERS", SITE_ROOT . "/helpers");

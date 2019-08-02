@@ -19,7 +19,8 @@ ul .redes-sociales {text-align: center;
 	}
 
 footer {background-color: #7c7c7c;
-width: 100%;}
+width: 100%;
+padding-right: 0px !important;}
 
 .logo {width: 100px;
 	margin-top: 0px;}
@@ -58,7 +59,7 @@ font-size: 15px;}
 	display: block;
 	margin: auto;
 	}
-	
+
 
 @media screen and (max-width: 500px) 
 	{
@@ -67,7 +68,7 @@ font-size: 15px;}
 	*/margin: 25px 40px;
 	display: inline-flex;
 	list-style-type: none;
-	font-size: 20px;
+	font-size: 30px;
 	letter-spacing: 30px;
 	text-align: center;
 	}
@@ -84,3 +85,5 @@ font-size: 15px;}
 	padding: 0px !important;
 
 }
+
+body {padding-right: 0px !important;}
