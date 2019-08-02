@@ -121,7 +121,7 @@ include("nav.php")
 							</dl>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row mb-5">
 						<div class="col-md-12">
 							<nav>
 								<ul class="pagination">
@@ -213,15 +213,3 @@ function modificarPublicacion( $publicacion ){
     <?php
       include("footer.php")
       ?>
-
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-
-
-
-  </body>
-</html>

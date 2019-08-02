@@ -4,8 +4,7 @@ include("nav.php")
 
 <?php
   
-  include_once "config/config.php";  
-                                               
+  include_once "config/config.php";                                                 
                                                                                                  
             //Guardo la imagen de la publicacion
                                   if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
@@ -53,26 +52,16 @@ include("nav.php")
 include_once PATH_HELPERS . '/database_helper.php';
        $conexion = getConexion();
 
-        $sql = "INSERT INTO publicaciones (producto, descripcion, id_cat_pubicacion, img, id_usuario) VALUES ('$producto', '$descripcion', '$categoria','$foto', '" . $_SESSION["id_usuario"] . "')";
+        $sql = "INSERT INTO publicaciones (producto, descripcion, id_cat_publicacion, img, id_usuario) VALUES ('$producto', '$descripcion', '$categoria','$foto', '" . $_SESSION["id_usuario"] . "')";
 
         $conexion->query($sql);
 
     }
 
-
-    
-
-
-
-
-
-
-                                     ?>
-
-
+?>
       
 
-      <div class="container-fluid mt-5">
+      <div class="container-fluid mt-5 mb-5">
         <div class="row">
           <div class="col-md-12">
             <form role="form" enctype="multipart/form-data" action="donar.php" method="POST">
@@ -120,33 +109,8 @@ include_once PATH_HELPERS . '/database_helper.php';
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-      <br>  
-
-
-
-
-
-
+    
 
     <?php
       include("footer.php")
       ?>
-
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-
-
-
-  </body>
-</html>

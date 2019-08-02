@@ -44,7 +44,7 @@
 			?>
 
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
 		<div class="row mt-3">
 			<div class="col">
 				<form action="registro.php" method="POST">
@@ -74,7 +74,7 @@
 					</div>
 
 					<input type="submit" class="btn btn-primary btn-block" name="Enviar" value="Enviar">
-					<br>
+					
 				</form>
 			</div>
 		</div>
@@ -85,15 +85,3 @@
 		<?php
 			include("footer.php");
 			?>
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-
-
-  </body>
-
-
-</html>

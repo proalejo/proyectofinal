@@ -17,7 +17,8 @@
     define("UPLOAD_IMAGE_PATH", SITE_ROOT . "/images/pubs");
 
   
-    
+    define("PATH_FILE", ROOT_URL . "/images/pubs");
+
     define("PATH_CSS", ROOT_URL . "/css");
 
     define("PATH_RECURSOS", ROOT_URL . "/recursos");

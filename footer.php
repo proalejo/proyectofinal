@@ -23,12 +23,15 @@
 								<h5>By AGH - ComunidadIT - 2019</h5>
 							</p>
 				</div>
-			
-		
 	</div>
 </div>
+</footer>
 
- 
-	</footer>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+
+  </body>
+</html>
 
 

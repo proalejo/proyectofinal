@@ -5,7 +5,7 @@ include("nav.php")
 
 
 
-<div class="container-fluid">
+<div class="container-fluid mb-5 mt-5">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="row">
@@ -75,18 +75,6 @@ include("nav.php")
 </div>
 
 
-<?php
+			<?php
 			include("footer.php");
 			?>
-
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-
-
-  </body>
-
-
-</html>

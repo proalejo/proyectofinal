@@ -58,7 +58,7 @@ font-size: 15px;}
 	display: block;
 	margin: auto;
 	}
-
+	
 
 @media screen and (max-width: 500px) 
 	{
@@ -82,4 +82,5 @@ font-size: 15px;}
 
 .container-fluid{
 	padding: 0px !important;
+
 }
