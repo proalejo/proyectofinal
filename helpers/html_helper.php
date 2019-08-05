@@ -95,5 +95,101 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
 
  <?php  }  ?>
 
+ <?php
 
- 
+function crearHTMLmisdonaciones($producto, $descripcion, $img){
+
+?>	
+		<div class="col-md-4">
+                          <img alt="alimento" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
+                              <dl class="mt-5">
+                                <dt>
+                                  <?= $producto ?>
+                                </dt>           
+                                
+                                <dd class="mt-5">
+                                  <?= $descripcion ?>
+                                </dd>
+                              </dl> 
+                          	<button type="button" name="modificar" class="btn btn-success">
+								Modificar
+							</button> 
+							<button type="button" name="eliminar" class="btn btn-danger">
+								Eliminar
+							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+                    </div>
+
+ <?php  }  ?>
+
+<?php
+
+function crearHTMLpublicacionUsuario( $id, $producto, $descripcion, $img ){
+
+        
+     ?>
+
+
+    <div class="col-md-4">
+           <img alt="alimento" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
+                    <dl class="mt-5">
+                        <dt>
+                                  <?= $producto ?>
+                                </dt>           
+                                
+                                <dd class="mt-5">
+                                  <?= $descripcion ?>
+                                </dd>
+                              </dl> 
+                            <a href="modificar.php?m=<?= $id ?>">
+                          	<button type="button" name="modificar" class="btn btn-success">
+								Modificar
+							</button></a>
+							<form action="misdonaciones.php" method="GET">
+
+							<button type="submit" name="eliminar" value="<?= $id ?>"class="btn btn-danger">
+								Eliminar
+							</button></form> 
+                    </div>
+
+      <?php  }  ?>
+
+      <?php
+
+// function modificarPublicacion( $publicacion ){
+
+//         $conexion = getConexion();
+
+//         $sql = "UPDATE publicaciones SET " . 
+//                     "producto= \"" . $publicacion["producto"] . "\"" .
+//                     ", descripcion=\"" . $publicacion["descripcion"] . "\"". 
+//                     ", id_categoria=" . $publicacion["id_categoria"] .
+//                     ", img=" . $publicacion["img"] .
+//                     ", id_usuario=" . $publicacion["id_usuario"];
+
+//         if ( $publicacion["img"] ){
+//             $sql .= ", img=\"" . $publicacion["img"] . "\"";
+//         }
+        
+//         $sql .= " WHERE pub_id = " . $publicacion["id"];
+
+
+
+//         $conexion->query( $sql );
+
+
+
+//     }
+
+
+    // function eliminarPublicacion( $id_publicacion ){
+
+    //     $conexion = getConexion();
+
+    //     $sql = "DELETE FROM publicaciones " .         
+    //            " WHERE pub_id = " . $id_publicacion;
+
+    //     $resultado = $conexion->query( $sql );
+
+    // }
+
+

@@ -17,7 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">    
   </head>
   <body>
-
+  	
   	<?php
         include_once 'config/config.php';
         include_once PATH_HELPERS .'/database_helper.php';

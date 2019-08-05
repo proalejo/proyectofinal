@@ -1,139 +1,56 @@
 <?php
 include("nav.php")
-?>     
-			<div class="container-fluid mt-5">
-					<div class="row">
-						<div class="col-md-4">
-							 
-							<button type="button" name="modificar" class="btn btn-success">
-								Modificar
-							</button> 
-							<button type="button" name="eliminar" class="btn btn-danger">
-								Eliminar
-							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-							<dl>
-								<dt>
-									Description lists
-								</dt>
-								<dd>
-									A description list is perfect for defining terms.
-								</dd>
-								<dt>
-									Euismod
-								</dt>
-								<dd>
-									Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-								</dd>
-								<dd>
-									Donec id elit non mi porta gravida at eget metus.
-								</dd>
-								<dt>
-									Malesuada porta
-								</dt>
-								<dd>
-									Etiam porta sem malesuada magna mollis euismod.
-								</dd>
-								<dt>
-									Felis euismod semper eget lacinia
-								</dt>
-								<dd>
-									Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-								</dd>
-							</dl>
-						</div>
-						<div class="col-md-4">
-							 
-							<button type="button" name="modificar" class="btn btn-success">
-								Modificar
-							</button> 
-							<button type="button" name="eliminar" class="btn btn-danger">
-								Eliminar
-							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-							<dl>
-								<dt>
-									Description lists
-								</dt>
-								<dd>
-									A description list is perfect for defining terms.
-								</dd>
-								<dt>
-									Euismod
-								</dt>
-								<dd>
-									Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-								</dd>
-								<dd>
-									Donec id elit non mi porta gravida at eget metus.
-								</dd>
-								<dt>
-									Malesuada porta
-								</dt>
-								<dd>
-									Etiam porta sem malesuada magna mollis euismod.
-								</dd>
-								<dt>
-									Felis euismod semper eget lacinia
-								</dt>
-								<dd>
-									Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-								</dd>
-							</dl>
-						</div>
-						<div class="col-md-4">
-							 
-							<button type="button" name="modificar" class="btn btn-success">
-								Modificar
-							</button> 
-							<button type="button" name="eliminar" class="btn btn-danger">
-								Eliminar
-							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-							<dl>
-								<dt>
-									Description lists
-								</dt>
-								<dd>
-									A description list is perfect for defining terms.
-								</dd>
-								<dt>
-									Euismod
-								</dt>
-								<dd>
-									Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-								</dd>
-								<dd>
-									Donec id elit non mi porta gravida at eget metus.
-								</dd>
-								<dt>
-									Malesuada porta
-								</dt>
-								<dd>
-									Etiam porta sem malesuada magna mollis euismod.
-								</dd>
-								<dt>
-									Felis euismod semper eget lacinia
-								</dt>
-								<dd>
-									Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-								</dd>
-							</dl>
-						</div>
-					</div>
-					
-<?php 
+?>   
 
-function buscarPublicacionesUsuario( $id_usuario ){
-        $conexion = getConexion();
+<div class="container-fluid m-5">
+     <div class="container-fluid">
+        <div class="row">  
 
-        $consulta = "SELECT pub_id, pub_producto, SUBSTRING(pub_descripcion, 1, 100) AS pub_descripcion, pub_id_categoria, pub_img, pub_id_usuario " . 
-                  "FROM publicaciones " . 
-                  "WHERE pub_id_usuario = " . $id_usuario;
+<?php  
+  include_once "config/config.php";  
+  include_once PATH_HELPERS . '/database_helper.php';
+  include_once PATH_DAOS . '/mispublicacionesDAO.php';
+  include_once PATH_HELPERS .'/html_helper.php';
+
+  $publica = buscarPublicacionesUsuario($_SESSION["id_usuario"]); 
+
+                    while ($publis = $publica->fetch_assoc()){
+
+                      crearHTMLpublicacionUsuario( $publis["id"], $publis["producto"], $publis["descripcion"], $publis["img"]);
+
+                    }
+                    ?>
 
 
-        $resultado = $conexion->query( $consulta );
+        </div>
+    </div>
+</div>
 
-        return $resultado;
+<?php
+if (isset($_GET["eliminar"])) {
+
+	$id_publicacion_el = $_GET["eliminar"];
+
+	include_once "config/config.php";  
+  	include_once PATH_HELPERS . '/database_helper.php';
+
+
+
+	$conexion = getConexion();
+
+        $sql = "DELETE FROM publicaciones " .         
+               " WHERE id = " . $id_publicacion_el;
+
+        $conexion->query( $sql );
+
     }
+?>
 
+
+
+
+
+<?php
 
 
 function modificarPublicacion( $publicacion ){
@@ -141,14 +58,14 @@ function modificarPublicacion( $publicacion ){
         $conexion = getConexion();
 
         $sql = "UPDATE publicaciones SET " . 
-                    "pub_producto= \"" . $publicacion["producto"] . "\"" .
-                    ", pub_descripcion=\"" . $publicacion["descripcion"] . "\"". 
-                    ", pub_id_categoria=" . $publicacion["id_categoria"] .
-                    ", pub_img=" . $publicacion["img"] .
-                    ", pub_id_usuario=" . $publicacion["id_usuario"];
+                    "producto= \"" . $publicacion["producto"] . "\"" .
+                    ", descripcion=\"" . $publicacion["descripcion"] . "\"". 
+                    ", id_categoria=" . $publicacion["id_categoria"] .
+                    ", img=" . $publicacion["img"] .
+                    ", id_usuario=" . $publicacion["id_usuario"];
 
-        if ( $publicacion["imagen"] ){
-            $sql .= ", pub_imagen=\"" . $publicacion["imagen"] . "\"";
+        if ( $publicacion["img"] ){
+            $sql .= ", img=\"" . $publicacion["img"] . "\"";
         }
         
         $sql .= " WHERE pub_id = " . $publicacion["id"];
