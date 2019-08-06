@@ -2,7 +2,13 @@
 include("nav.php")
 ?>
 
+<?php  
+  include_once "config/config.php";  
+  include_once PATH_HELPERS . '/database_helper.php';
+  include_once PATH_DAOS . '/mispublicacionesDAO.php';
+  include_once PATH_HELPERS .'/html_helper.php';
 
+  ?>
 
 
 <div class="container-fluid mb-5 mt-5">
@@ -10,36 +16,16 @@ include("nav.php")
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-6">
-					<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-					<dl>
-						<dt>
-							Description lists
-						</dt>
-						<dd>
-							A description list is perfect for defining terms.
-						</dd>
-						<dt>
-							Euismod
-						</dt>
-						<dd>
-							Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-						</dd>
-						<dd>
-							Donec id elit non mi porta gravida at eget metus.
-						</dd>
-						<dt>
-							Malesuada porta
-						</dt>
-						<dd>
-							Etiam porta sem malesuada magna mollis euismod.
-						</dd>
-						<dt>
-							Felis euismod semper eget lacinia
-						</dt>
-						<dd>
-							Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-						</dd>
-					</dl>
+					<img alt="producto" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
+					<dl class="mt-5">
+                                <dt>
+                                  <?= $producto ?>
+                                </dt>           
+                                
+                                <dd class="mt-5">
+                                  <?= $descripcion ?>
+                                </dd>
+                              </dl> 
 				</div>
 				<div class="col-md-6">
 					<form role="form">
@@ -58,6 +44,13 @@ include("nav.php")
 							<input type="text" class="form-control" id="inputtext" />
 						</div>
 						<div class="checkbox">
+							<label>
+								<input type="checkbox" /> Acuerdo con el Donante
+							</label>
+
+							<label>
+								<input type="checkbox" /> Retiro en Persona
+							</label>
 							 
 							<label>
 								<input type="checkbox" /> Envio

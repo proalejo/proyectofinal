@@ -90,7 +90,11 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <a class="btn btn-success" href="lonecesito.php">Lo Necesito</a>
+                          <form action="lonecesito.php?m=<?= $id ?>" method="GET">
+
+              <button type="submit" name="lonecesito" value="<?= $id ?>"class="btn btn-success">
+                Lo Necesito
+              </button></form>
                     </div>
 
  <?php  }  ?>
@@ -154,42 +158,4 @@ function crearHTMLpublicacionUsuario( $id, $producto, $descripcion, $img ){
       <?php  }  ?>
 
       <?php
-
-// function modificarPublicacion( $publicacion ){
-
-//         $conexion = getConexion();
-
-//         $sql = "UPDATE publicaciones SET " . 
-//                     "producto= \"" . $publicacion["producto"] . "\"" .
-//                     ", descripcion=\"" . $publicacion["descripcion"] . "\"". 
-//                     ", id_categoria=" . $publicacion["id_categoria"] .
-//                     ", img=" . $publicacion["img"] .
-//                     ", id_usuario=" . $publicacion["id_usuario"];
-
-//         if ( $publicacion["img"] ){
-//             $sql .= ", img=\"" . $publicacion["img"] . "\"";
-//         }
-        
-//         $sql .= " WHERE pub_id = " . $publicacion["id"];
-
-
-
-//         $conexion->query( $sql );
-
-
-
-//     }
-
-
-    // function eliminarPublicacion( $id_publicacion ){
-
-    //     $conexion = getConexion();
-
-    //     $sql = "DELETE FROM publicaciones " .         
-    //            " WHERE pub_id = " . $id_publicacion;
-
-    //     $resultado = $conexion->query( $sql );
-
-    // }
-
 
