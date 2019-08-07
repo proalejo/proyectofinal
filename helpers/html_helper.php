@@ -121,7 +121,7 @@ function crearHTMLmisdonaciones($producto, $descripcion, $img){
 							<button type="button" name="eliminar" class="btn btn-danger">
 								Eliminar
 							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
-                    </div>
+    </div>
 
  <?php  }  ?>
 
@@ -153,7 +153,7 @@ function crearHTMLpublicacionUsuario( $id, $producto, $descripcion, $img ){
 							<button type="submit" name="eliminar" value="<?= $id ?>"class="btn btn-danger">
 								Eliminar
 							</button></form> 
-                    </div>
+    </div>
 
       <?php  }  ?>
 

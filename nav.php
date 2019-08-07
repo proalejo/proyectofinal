@@ -43,7 +43,7 @@
 							</ul>
 							<form class="form-inline">
 								<input class="form-control mr-sm-2" type="text"> 
-								<button onclick="enviarBusqueda();" name="buscar" type="button"  class="btn btn-primary my-2 my-sm-0">
+								<button onclick="enviarBusqueda();" name="submit" type="button"  class="btn btn-primary my-2 my-sm-0">
 									Buscar
 								</button>
 							</form>
@@ -90,6 +90,9 @@
 		</div>
 	</div>
 </div>
+
+<script src="<?= PATH_VENDOR ?>/jquery/jquery-3.4.1.min.js"></script>
+<script src="<?= PATH_VENDOR ?>/bootstrap/js/bootstrap.min.js"></script>
 
  <script type="text/javascript">
     	
