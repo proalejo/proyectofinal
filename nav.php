@@ -17,7 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">    
   </head>
   <body>
-  	
+
   	<?php
         include_once 'config/config.php';
         include_once PATH_HELPERS .'/database_helper.php';
@@ -41,12 +41,11 @@
 								</li>
 								
 							</ul>
-							<form class="form-inline">
-								<input class="form-control mr-sm-2" type="text"> 
-								<button onclick="enviarBusqueda();" name="submit" type="button"  class="btn btn-primary my-2 my-sm-0">
-									Buscar
-								</button>
-							</form>
+									<form class="form-inline" action="resultado.php" method="GET">
+										<input class="form-control mr-sm-2" type="text" name="busqueda"> 
+										
+										<input type="submit" name="submit" value="Buscar" class="btn btn-primary">
+									</form>
 							<ul class="navbar-nav ml-md-auto">
 									<li class="nav-item dropdown">
 									 
@@ -75,7 +74,8 @@
 										else {
 										?>
 											<a class="dropdown-item" href="donar.php">Donar</a>
-										 	<a class="dropdown-item" href="misdonaciones.php">Mis Donaciones</a> 	
+										 	<a class="dropdown-item" href="misdonaciones.php">Mis Donaciones</a>
+										 	<a class="dropdown-item" href="mispedidos.php">Mis Pedidos</a> 	
 
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
@@ -84,27 +84,14 @@
 									</div>
 								</li>
 							</ul>
-				</div>
-			</nav>
-
+					</div>
+				</nav>
+			</div>
 		</div>
 	</div>
 </div>
 
+
 <script src="<?= PATH_VENDOR ?>/jquery/jquery-3.4.1.min.js"></script>
-<script src="<?= PATH_VENDOR ?>/bootstrap/js/bootstrap.min.js"></script>
-
- <script type="text/javascript">
-    	
-    	function enviarBusqueda(){
-    		
-			var urlBusqueda = 'resultado.php?buscar=' + $("#buscar").val() +
-							  '&categoria=' + $("#categoria").val() + 
-							  '&orden=' + $("#orden").val();
-
-			window.setTimeout( window.location = urlBusqueda, 100 );	
-
-	    }
-
-
-  </script>
+<!-- <script src="<?= PATH_VENDOR ?>/bootstrap/js/bootstrap.min.js"></script> -->
+<script src="<?= PATH_VENDOR ?>/popper/popper.min.js"></script>

@@ -1,36 +1,8 @@
-<?php
 
-function crearHTMLCardPublicacion($titulo, $descripcion, $imagen){
-?>	
-
-  <div class="col-md-3 mb-4 text-center d-flex align-items-stretch">
-
-	<div class="card">
-		<div class="card-title mb-5 p-4">
-		  <?= $titulo ?>
-	  	</div>
-
-	    <img class="card-img-top"  alt=""  src="<?= FILES . '/images/pubs/' . $imagen ?>">
-	   
-	    <div class="card-img-top card-body">
-
-		</div>
-	      
-	      <div class="card-footer">
-	    	  <?= $descripcion ?>
-		  </div>
-
-	</div>
-  </div>
-
-
-<?php } 
-
- ?>
 
  <?php
 
-function crearHTMLpublicacionalimento($producto, $descripcion, $img){
+function crearHTMLpublicacionalimento($id, $producto, $descripcion, $img){
 
 ?>	
 		<div class="col-md-4">
@@ -44,7 +16,12 @@ function crearHTMLpublicacionalimento($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <a class="btn btn-success" href="lonecesito.php">Lo Necesito</a>
+                              <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
+                              
+                          
+                        </form>
                     </div>
 
  <?php  }  ?>
@@ -115,12 +92,15 @@ function crearHTMLmisdonaciones($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
+                          <div class="mt-2">
                           	<button type="button" name="modificar" class="btn btn-success">
-								Modificar
-							</button> 
-							<button type="button" name="eliminar" class="btn btn-danger">
-								Eliminar
-							</button><img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+              								Modificar
+              							</button> </div>
+                            <div class="mt-2">
+              							<button type="button" name="eliminar" class="btn btn-danger">
+              								Eliminar
+              							</button></div>
+                          
     </div>
 
  <?php  }  ?>
@@ -144,18 +124,42 @@ function crearHTMLpublicacionUsuario( $id, $producto, $descripcion, $img ){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                            <a href="modificar.php?m=<?= $id ?>">
-                          	<button type="button" name="modificar" class="btn btn-success">
-								Modificar
-							</button></a>
-							<form action="misdonaciones.php" method="GET">
-
-							<button type="submit" name="eliminar" value="<?= $id ?>"class="btn btn-danger">
-								Eliminar
-							</button></form> 
+                              <div class="container fluid">
+                                <div class="row">
+                                  <div class="mt-2 mr-2"> 
+                                    <a href="modificar.php?m=<?= $id ?>">
+                                  	<button type="button" name="modificar" class="btn btn-success">
+                      								Modificar
+                      							</button></a>
+                                  </div>
+                                  <div class="mt-2 ml-2">
+                      							<form action="misdonaciones.php" method="GET">
+                      							<button type="submit" name="eliminar" value="<?= $id ?>"class="btn btn-danger">
+                      								Eliminar
+                      							</button></form> 
+                                  </div>
+                                </div>
+                              </div>
     </div>
 
       <?php  }  ?>
+<?php
 
-      <?php
+function crearHTMLcardProdu($producto, $descripcion, $img){
 
+?>  
+    <div class="col-md-4">
+                          <img alt="producto" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
+                              <dl class="mt-5">
+                                <dt>
+                                  <?= $producto ?>
+                                </dt>           
+                                
+                                <dd class="mt-5">
+                                  <?= $descripcion ?>
+                                </dd>
+                              </dl> 
+                          <a class="btn btn-success" href="lonecesito.php">Lo Necesito</a>
+                    </div>
+
+ <?php  }  ?>

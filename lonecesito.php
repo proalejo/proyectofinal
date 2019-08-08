@@ -7,6 +7,23 @@ include("nav.php")
   include_once PATH_HELPERS . '/database_helper.php';
   include_once PATH_DAOS . '/mispublicacionesDAO.php';
   include_once PATH_HELPERS .'/html_helper.php';
+
+  if (isset($_GET["aceptar"])) {
+
+  	$usuarioreceptor = $_SESSION["id_usuario"];
+  	
+  	
+  
+  
+  	$conexion = getConexion();
+
+        $sql = "INSERT INTO donaciones (id_receptor, fecha, id_publicacion, id_usuario, id_metodoenvio) VALUES ('$producto', '$descripcion', '$categoria','$foto', '" . $_SESSION["id_usuario"] . "')";
+
+        $conexion->query($sql);
+
+    }
+
+
   ?>
 
 
@@ -16,32 +33,56 @@ include("nav.php")
 				<?php
 					if ( !isset($_SESSION["usuario"]) ){
 					?>
-					<div class="iniciarsesion">
-						<h1>Porfavor Iniciar Sesion</h1>
+					<div class="row justify-content-center align-items-center mt-5 mb-5 w-100">
+						<div class="alert alert-danger" role="alert">
+							  Porfavor Inicie Sesion
+						</div>
 					</div>
 						<?php
 						}
 						else {
 						?>
-						<h1>Donacion Exitosa</h1>
-						<p>Porfavor elija el metodo de envio</p>
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-						  <label class="form-check-label" for="exampleRadios1">
-						    Retiro En Persona
-						  </label>
-						</div>
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-						  <label class="form-check-label" for="exampleRadios2">
-						    Envio
-						  </label>
-						</div>
 
-							<button type="submit" class="btn btn-primary">
-							Aceptar
-								
-							</button>					
+						
+
+
+									<h1>Donacion Exitosa</h1>
+									<p>Porfavor elija el metodo de envio</p>
+
+						
+
+
+
+
+
+									<form class="form-horizontal" action="lonecesito.php" method="GET">
+									<fieldset>
+
+									
+
+									<!-- Multiple Radios -->
+									<div class="form-group">
+									  
+									  <div class="col-md-4">
+									  <div class="radio">
+									    <label for="radios-0">
+									      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+									     Envio
+									    </label>
+										</div>
+									  <div class="radio">
+									    <label for="radios-1">
+									      <input type="radio" name="radios" id="radios-1" value="2">
+									     Retiro en persona
+									    </label>
+										</div>
+									  </div>
+									</div>
+									<button type="submit" name="aceptar" class="btn btn-primary">
+											Aceptar								
+									</button>	
+									</fieldset>
+									</form>
 				<?php }
 				?>
 						

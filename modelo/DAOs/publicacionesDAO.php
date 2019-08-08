@@ -48,15 +48,4 @@
         return $resultado;
     }
 
-    function buscarPublicacionesUsuario( $id_usuario ){
-        $conexion = getConexion();
-
-        $consulta = "SELECT pub_id, pub_titulo, SUBSTRING(pub_descripcion, 1, 100) AS pub_descripcion, pub_precio, pub_id_categoria, pub_id_usuario, pub_id_tipo_publicacion, pub_imagen " . 
-                  "FROM publicaciones " . 
-                  "WHERE pub_id_usuario = " . $id_usuario;
-
-
-        $resultado = $conexion->query( $consulta );
-
-        return $resultado;
-    }
+    

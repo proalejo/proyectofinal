@@ -2,8 +2,7 @@
 include("nav.php")
 ?>
 
-<?php
-  
+<?php  
   include_once "config/config.php";                                                 
                                                                                                  
             //Guardo la imagen de la publicacion
@@ -56,10 +55,22 @@ include_once PATH_HELPERS . '/database_helper.php';
 
         $conexion->query($sql);
 
-    }
+        if ($sql) 
+          ?>
+        <div class="row mt-5 ml-2">
+          <div class="alert alert-success" role="alert">
+            Donacion Exitosa!
+          </div>
+        </div>
+          <?php
+        }
 
-?>
-      
+        
+    
+
+
+
+?>      
 
       <div class="container-fluid mt-5 mb-5">
         <div class="row">
@@ -78,34 +89,25 @@ include_once PATH_HELPERS . '/database_helper.php';
                   Descripcion
                 </label>
                 <input type="text" class="form-control" id="inputdescrip" name="descripcion" />
-              </div>
-              
+              </div>              
               <select name="categoria">
                  <option value="1">Muebles</option> 
                  <option value="2">Ropa</option> 
-                 <option value="3">Alimentos</option>
-                  
-              </select>          
+                 <option value="3">Alimentos</option>                  
+              </select>      
 
 
-              <div class="form-group">
-                 
+              <div class="form-group">                 
                 <label for="exampleInputFile">
                   Imagen Producto
                 </label>
-                <input type="file" name="foto" class="form-control-file" id="exampleInputFile" />
-                
+                <input type="file" name="foto" class="form-control-file" id="exampleInputFile" />                
               </div>
-              <div class="checkbox">
-                 
+              <div class="checkbox">           
                 
               </div> 
-              <input type="submit" name="submit" class="btn btn-primary">
-              
+              <input type="submit" name="submit" class="btn btn-primary">              
             </form>
-
-
-
           </div>
         </div>
       </div>
