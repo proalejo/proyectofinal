@@ -65,7 +65,7 @@ font-size: 15px;}
 	margin: auto;
 	}
 
-	
+
 
 @media screen and (max-width: 500px) 
 	{
@@ -77,15 +77,25 @@ font-size: 15px;}
 	font-size: 30px;
 	letter-spacing: 30px;
 	text-align: center;
+	width: 100%;
 	}
 
 	h5 {padding: 20px;
 	margin-top: 80px;
 	text-align: left;}
 
+	body {width: 100%;}
+
 
 
 }
+
+@media screen and (max-width: 300px) 
+	{
+		footer {width: 100%;}
+		body {width: 100%;}
+	}
+
 
 .container-fluid{
 	padding: 0px !important;
