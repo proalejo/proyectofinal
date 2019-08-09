@@ -1,5 +1,3 @@
-
-
  <?php
 
 function crearHTMLpublicacionalimento($id, $producto, $descripcion, $img){
@@ -16,12 +14,47 @@ function crearHTMLpublicacionalimento($id, $producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                              <form action="lonecesito.php" method="GET">
+
+
+                    <?php
+                      if ( !isset($_SESSION["usuario"]) ){
+                    ?>
+                    <div class="col-md-8">
+                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                    </div>
+
+
+                    <?php
+                    }
+                    else {
+                    ?>
+
+
+
+                        <form action="lonecesito.php" method="GET">
                                 <input type="hidden" name="pub" value="<?= $id ?>">
                                 <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
+
+                                <div class="col-md-4 mt-5">
+                                  <div class="radio">
+                                      <label for="radios-0">
+                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                       Envio
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label for="radios-1">
+                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                       Retiro en persona
+                                      </label>
+                                  </div>
+                                </div>
                               
                           
                         </form>
+
+                        <?php }
+                    ?>
                     </div>
 
  <?php  }  ?>
@@ -44,7 +77,45 @@ function crearHTMLpublicacionmueble($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <a class="btn btn-success" href="lonecesito.php">Lo Necesito</a>
+                          <?php
+                      if ( !isset($_SESSION["usuario"]) ){
+                    ?>
+                    <div class="col-md-8">
+                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                    </div>
+
+
+                    <?php
+                    }
+                    else {
+                    ?>
+
+
+
+                              <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
+                              
+                              <div class="col-md-4 mt-5">
+                                  <div class="radio">
+                                      <label for="radios-0">
+                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                       Envio
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label for="radios-1">
+                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                       Retiro en persona
+                                      </label>
+                                  </div>
+                                </div>
+                              
+                          
+                        </form>
+
+                        <?php }
+                    ?>
                     </div>
 
  <?php  }  ?>
@@ -67,11 +138,46 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <form action="lonecesito.php?m=<?= $id ?>" method="GET">
+                          <?php
+                      if ( !isset($_SESSION["usuario"]) ){
+                    ?>
+                    <div class="col-md-8">
+                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                    </div>
 
-              <button type="submit" name="lonecesito" value="<?= $id ?>"class="btn btn-success">
-                Lo Necesito
-              </button></form>
+
+                    <?php
+                    }
+                    else {
+                    ?>
+
+
+
+                              <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
+                              
+
+                              <div class="col-md-4 mt-5">
+                                  <div class="radio">
+                                      <label for="radios-0">
+                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                       Envio
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label for="radios-1">
+                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                       Retiro en persona
+                                      </label>
+                                  </div>
+                                </div>
+                              
+                          
+                        </form>
+
+                        <?php }
+                    ?>
                     </div>
 
  <?php  }  ?>
@@ -159,7 +265,45 @@ function crearHTMLcardProdu($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <a class="btn btn-success" href="lonecesito.php">Lo Necesito</a>
+                          <?php
+                      if ( !isset($_SESSION["usuario"]) ){
+                    ?>
+                    <div class="col-md-8">
+                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
                     </div>
 
+
+                    <?php
+                    }
+                    else {
+                    ?>
+
+
+
+                              <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
+                              
+
+                              <div class="col-md-4 mt-5">
+                                  <div class="radio">
+                                      <label for="radios-0">
+                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                       Envio
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label for="radios-1">
+                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                       Retiro en persona
+                                      </label>
+                                  </div>
+                                </div>
+                              
+                          
+                        </form>
+
+                        <?php }
+                    ?>
+                    </div>
  <?php  }  ?>

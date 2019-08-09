@@ -45,9 +45,11 @@ include("nav.php")
 
 						
 
-
+									<div class="mt-5 mb-5">
 									<h1>Donacion Exitosa</h1>
-									<p>Porfavor elija el metodo de envio</p>
+									<div class="mt-3">									
+										<p>Muchas Gracias por utilizar nuestra plataforma!</p></div>
+</div>
 
 						
 
@@ -55,34 +57,7 @@ include("nav.php")
 
 
 
-									<form class="form-horizontal" action="lonecesito.php" method="GET">
-									<fieldset>
-
 									
-
-									<!-- Multiple Radios -->
-									<div class="form-group">
-									  
-									  <div class="col-md-4">
-									  <div class="radio">
-									    <label for="radios-0">
-									      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-									     Envio
-									    </label>
-										</div>
-									  <div class="radio">
-									    <label for="radios-1">
-									      <input type="radio" name="radios" id="radios-1" value="2">
-									     Retiro en persona
-									    </label>
-										</div>
-									  </div>
-									</div>
-									<button type="submit" name="aceptar" class="btn btn-primary">
-											Aceptar								
-									</button>	
-									</fieldset>
-									</form>
 				<?php }
 				?>
 						
