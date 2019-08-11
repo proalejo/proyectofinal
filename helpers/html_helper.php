@@ -3,7 +3,9 @@
 function crearHTMLpublicacionalimento($id, $producto, $descripcion, $img){
 
 ?>	
-		<div class="col-md-4">
+		<div class="col-md-4">     
+
+
                           <img alt="alimento" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
                               <dl class="mt-5">
                                 <dt>
@@ -15,36 +17,33 @@ function crearHTMLpublicacionalimento($id, $producto, $descripcion, $img){
                                 </dd>
                               </dl> 
 
-
-                    <?php
-                      if ( !isset($_SESSION["usuario"]) ){
-                    ?>
-                    <div class="col-md-8">
-                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
-                    </div>
-
-
-                    <?php
-                    }
-                    else {
-                    ?>
+                                <?php
+                                  if ( !isset($_SESSION["usuario"]) ){
+                                ?>
+                                <div class="col-md-8">
+                                <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                                </div>
 
 
+                                <?php
+                                }
+                                else {
+                                ?>
 
-                        <form action="lonecesito.php" method="GET">
-                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="id_publicacion" value="<?= $id ?>">                                
                                 <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
 
                                 <div class="col-md-4 mt-5">
                                   <div class="radio">
                                       <label for="radios-0">
-                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                        <input type="radio" name="id_metodoenvio" id="radios-0" value="1" checked="checked">
                                        Envio
                                       </label>
                                   </div>
                                   <div class="radio">
                                       <label for="radios-1">
-                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                        <input type="radio" name="id_metodoenvio" id="radios-1" value="2">
                                        Retiro en persona
                                       </label>
                                   </div>
@@ -78,34 +77,32 @@ function crearHTMLpublicacionmueble($producto, $descripcion, $img){
                                 </dd>
                               </dl> 
                           <?php
-                      if ( !isset($_SESSION["usuario"]) ){
-                    ?>
-                    <div class="col-md-8">
-                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
-                    </div>
+                                  if ( !isset($_SESSION["usuario"]) ){
+                                ?>
+                                <div class="col-md-8">
+                                <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                                </div>
 
 
-                    <?php
-                    }
-                    else {
-                    ?>
+                                <?php
+                                }
+                                else {
+                                ?>
 
-
-
-                              <form action="lonecesito.php" method="GET">
-                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="id_publicacion" value="<?= $id ?>">                                
                                 <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
-                              
-                              <div class="col-md-4 mt-5">
+
+                                <div class="col-md-4 mt-5">
                                   <div class="radio">
                                       <label for="radios-0">
-                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                        <input type="radio" name="id_metodoenvio" id="radios-0" value="1" checked="checked">
                                        Envio
                                       </label>
                                   </div>
                                   <div class="radio">
                                       <label for="radios-1">
-                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                        <input type="radio" name="id_metodoenvio" id="radios-1" value="2">
                                        Retiro en persona
                                       </label>
                                   </div>
@@ -138,36 +135,33 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <?php
-                      if ( !isset($_SESSION["usuario"]) ){
-                    ?>
-                    <div class="col-md-8">
-                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
-                    </div>
+                           <?php
+                                  if ( !isset($_SESSION["usuario"]) ){
+                                ?>
+                                <div class="col-md-8">
+                                <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                                </div>
 
 
-                    <?php
-                    }
-                    else {
-                    ?>
+                                <?php
+                                }
+                                else {
+                                ?>
 
-
-
-                              <form action="lonecesito.php" method="GET">
-                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="id_publicacion" value="<?= $id ?>">                                
                                 <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
-                              
 
-                              <div class="col-md-4 mt-5">
+                                <div class="col-md-4 mt-5">
                                   <div class="radio">
                                       <label for="radios-0">
-                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                        <input type="radio" name="id_metodoenvio" id="radios-0" value="1" checked="checked">
                                        Envio
                                       </label>
                                   </div>
                                   <div class="radio">
                                       <label for="radios-1">
-                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                        <input type="radio" name="id_metodoenvio" id="radios-1" value="2">
                                        Retiro en persona
                                       </label>
                                   </div>
@@ -175,7 +169,6 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
                               
                           
                         </form>
-
                         <?php }
                     ?>
                     </div>
@@ -266,35 +259,32 @@ function crearHTMLcardProdu($producto, $descripcion, $img){
                                 </dd>
                               </dl> 
                           <?php
-                      if ( !isset($_SESSION["usuario"]) ){
-                    ?>
-                    <div class="col-md-8">
-                    <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
-                    </div>
+                                  if ( !isset($_SESSION["usuario"]) ){
+                                ?>
+                                <div class="col-md-8">
+                                <p><strong>Para solicitar esta donacion usted debe estar Registrado y Logueado</strong></p>
+                                </div>
 
 
-                    <?php
-                    }
-                    else {
-                    ?>
+                                <?php
+                                }
+                                else {
+                                ?>
 
-
-
-                              <form action="lonecesito.php" method="GET">
-                                <input type="hidden" name="pub" value="<?= $id ?>">
+                                <form action="lonecesito.php" method="GET">
+                                <input type="hidden" name="id_publicacion" value="<?= $id ?>">                                
                                 <input type="submit" name="submit" class="btn btn-success" value="Lo Necesito">
-                              
 
-                              <div class="col-md-4 mt-5">
+                                <div class="col-md-4 mt-5">
                                   <div class="radio">
                                       <label for="radios-0">
-                                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                        <input type="radio" name="id_metodoenvio" id="radios-0" value="1" checked="checked">
                                        Envio
                                       </label>
                                   </div>
                                   <div class="radio">
                                       <label for="radios-1">
-                                        <input type="radio" name="radios" id="radios-1" value="2">
+                                        <input type="radio" name="id_metodoenvio" id="radios-1" value="2">
                                        Retiro en persona
                                       </label>
                                   </div>

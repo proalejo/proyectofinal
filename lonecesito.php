@@ -8,16 +8,29 @@ include("nav.php")
   include_once PATH_DAOS . '/mispublicacionesDAO.php';
   include_once PATH_HELPERS .'/html_helper.php';
 
-  if (isset($_GET["aceptar"])) {
+  if (isset($_GET["submit"])) {
 
-  	$usuarioreceptor = $_SESSION["id_usuario"];
-  	
-  	
-  
-  
-  	$conexion = getConexion();
 
-        $sql = "INSERT INTO donaciones (id_receptor, fecha, id_publicacion, id_usuario, id_metodoenvio) VALUES ('$producto', '$descripcion', '$categoria','$foto', '" . $_SESSION["id_usuario"] . "')";
+    if (isset($_GET["usuarioreceptor"])) {
+                                        $usuarioreceptor = $_SESSION["id_usuario"];
+                                      }
+
+                                      if (isset($_GET["id_publicacion"])) {
+                                        $id_publicacion = $_GET["id_publicacion"];
+                                      }
+
+                                      
+                                      if (isset($_GET["id_metodoenvio"])) {
+                                        $id_metodoenvio = $_GET["id_metodoenvio"];
+                                      }
+
+    
+  include_once PATH_HELPERS . "/database_helper.php";
+  
+    $conexion = getConexion();
+
+        $sql = "INSERT INTO donaciones (id_receptor, fecha, id_publicacion, id_metodoenvio) 
+                VALUES ('". $_SESSION['id_usuario'] ."' , now(), '$id_publicacion','$id_metodoenvio')";
 
         $conexion->query($sql);
 
@@ -28,48 +41,40 @@ include("nav.php")
 
 
 <div class="container-fluid mb-5 mt-5">
-	<div class="row justify-content-center align-items-center">
-		<div class="col-md-12">
-				<?php
-					if ( !isset($_SESSION["usuario"]) ){
-					?>
-					<div class="row justify-content-center align-items-center mt-5 mb-5 w-100">
-						<div class="alert alert-danger" role="alert">
-							  Porfavor Inicie Sesion
-						</div>
-					</div>
-						<?php
-						}
-						else {
-						?>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-12">
+        <?php
+          if (isset($sql)){
+          ?>
+          
 
-						
+            
 
-									<div class="mt-5 mb-5">
-									<h1>Donacion Exitosa</h1>
-									<div class="mt-3">									
-										<p>Muchas Gracias por utilizar nuestra plataforma!</p></div>
+                  <div class="mt-5 mb-5">
+                  <h1>Donacion Exitosa</h1>
+                  <div class="mt-3">                  
+                    <p>Muchas Gracias por utilizar nuestra plataforma!</p></div>
 </div>
 
-						
+            
 
 
 
 
 
-									
-				<?php }
-				?>
-						
-						
-					
-				
-			
-		</div>
-	</div>
+                  
+        <?php }
+        ?>
+            
+            
+          
+        
+      
+    </div>
+  </div>
 </div>
 
 
-			<?php
-			include("footer.php");
-			?>
+      <?php
+      include("footer.php");
+      ?>
