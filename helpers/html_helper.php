@@ -185,7 +185,7 @@ function crearHTMLpublicacionropa($id, $producto, $descripcion, $img){
 
 
  <?php
-function crearHTMLmisdonaciones($producto, $descripcion, $img){
+function crearHTMLmisdonaciones($id, $producto, $descripcion, $img){
 
 ?>	
 		<div class="col-md-4">
@@ -252,7 +252,7 @@ function crearHTMLpublicacionUsuario( $id, $producto, $descripcion, $img ){
       <?php  }  ?>
 <?php
 
-function crearHTMLcardProdu($producto, $descripcion, $img){
+function crearHTMLcardProdu($id, $producto, $descripcion, $img){
 
 ?>  
     <div class="col-md-4">
@@ -304,4 +304,26 @@ function crearHTMLcardProdu($producto, $descripcion, $img){
                         <?php }
                     ?>
                     </div>
+ <?php  }  ?>
+
+
+
+ <?php
+function crearHTMLpedidosUsuario($id, $producto, $descripcion, $img){
+
+?>  
+    <div class="col-md-4">
+                          <img alt="alimento" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
+                              <dl class="mt-5">
+                                <dt>
+                                  <?= $producto ?>
+                                </dt>           
+                                
+                                <dd class="mt-5">
+                                  <?= $descripcion ?>
+                                </dd>
+                              </dl> 
+                                                    
+    </div>
+
  <?php  }  ?>

@@ -13,17 +13,14 @@ include("nav.php")
 
 
 
+$pedidos = buscarPedidosUsuario($_SESSION["id_usuario"]); 
 
+                    while ($pedi = $pedidos->fetch_assoc()){
 
+                      crearHTMLpedidosUsuario( $pedi["id"], $pedi["producto"], $pedi["descripcion"], $pedi["img"]);
 
-
-
-
-
-
-
-
-
+                    }
+                    ?>
 
 
 ?>

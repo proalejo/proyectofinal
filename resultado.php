@@ -34,7 +34,7 @@ include("nav.php")
          		$resultadoprodu = buscarProdu($busqueda);
 
          		while( $produ = $resultadoprodu->fetch_assoc()){
-         			crearHTMLcardProdu($produ["producto"], $produ["descripcion"], $produ["img"]);
+         			crearHTMLcardProdu($produ["id"],$produ["producto"], $produ["descripcion"], $produ["img"]);
 
          		}
 
