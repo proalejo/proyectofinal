@@ -5,7 +5,7 @@ function buscarPedidosUsuario( $id_usuario ){
 
         $consulta = "SELECT * " . 
                   "FROM donaciones " . 
-                  "WHERE id_usuario = " . $id_usuario;
+                  "WHERE id_receptor = " . $id_usuario;
 
 
         $resultado = $conexion->query( $consulta );

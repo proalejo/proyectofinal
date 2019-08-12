@@ -13,13 +13,13 @@ include("nav.php")
 
     include_once PATH_HELPERS . "/database_helper.php";
   
-    $conexion = getConexion();
+    //$conexion = getConexion();
 
-        $sql = "SELECT id_usuario FROM 'publicaciones' WHERE  'id =  $id_publicacion'"
+      //  $sql = "SELECT id_usuario FROM 'publicaciones' WHERE  'id =  $id_publicacion'"
 
-          $id_usuario = $conexion->query($sql);
+        //  $id_usuario = $conexion->query($sql);
 
-                  return $id_usuario;
+          //        return $id_usuario;
 
 
                                       if (isset($_GET["id_receptor"])) {
@@ -30,9 +30,9 @@ include("nav.php")
                                         $id_publicacion = $_GET["id_publicacion"];
                                       }
 
-                                      if (isset($_GET["id_usuario"])) {
-                                        $id_usuario = $_GET["id_usuario"];
-                                      }
+                                    //  if (isset($_GET["id_usuario"])) {
+                                      //  $id_usuario = $_GET["id_usuario"];
+                                      //}
 
                                       
                                       if (isset($_GET["id_metodoenvio"])) {
@@ -46,8 +46,8 @@ include("nav.php")
 
         
 
-        $sql = "INSERT INTO donaciones (id_receptor, fecha, id_publicacion, id_usuario, id_metodoenvio) 
-                VALUES ('". $_SESSION['id_receptor'] ."' , now(), '$id_publicacion', '$id_usuario', '$id_metodoenvio')";
+        $sql = "INSERT INTO donaciones (id_receptor, fecha, id_publicacion, id_metodoenvio) 
+                VALUES ('" . $_SESSION["id_receptor"] . "' , now(), '$id_publicacion', '$id_metodoenvio')";
 
         
 

@@ -309,11 +309,13 @@ function crearHTMLcardProdu($id, $producto, $descripcion, $img){
 
 
  <?php
+
+ 
 function crearHTMLpedidosUsuario($id, $producto, $descripcion, $img){
 
 ?>  
     <div class="col-md-4">
-                          <img alt="alimento" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
+                          <img alt="producto" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
                               <dl class="mt-5">
                                 <dt>
                                   <?= $producto ?>
