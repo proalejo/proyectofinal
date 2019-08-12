@@ -11,7 +11,7 @@ include("nav.php")
   if (isset($_GET["submit"])) {
 
 
-    if (isset($_GET["usuarioreceptor"])) {
+                                      if (isset($_GET["usuarioreceptor"])) {
                                         $usuarioreceptor = $_SESSION["id_usuario"];
                                       }
 

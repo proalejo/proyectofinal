@@ -62,10 +62,12 @@ function crearHTMLpublicacionalimento($id, $producto, $descripcion, $img){
 
  <?php
 
-function crearHTMLpublicacionmueble($producto, $descripcion, $img){
+function crearHTMLpublicacionmueble($id, $producto, $descripcion, $img){
 
-?>	
-		<div class="col-md-4">
+?>  
+    <div class="col-md-4">     
+
+
                           <img alt="mueble" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
                               <dl class="mt-5">
                                 <dt>
@@ -76,7 +78,8 @@ function crearHTMLpublicacionmueble($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                          <?php
+
+                                <?php
                                   if ( !isset($_SESSION["usuario"]) ){
                                 ?>
                                 <div class="col-md-8">
@@ -118,13 +121,15 @@ function crearHTMLpublicacionmueble($producto, $descripcion, $img){
  <?php  }  ?>
 
 
- 
+
  <?php
 
-function crearHTMLpublicacionropa($producto, $descripcion, $img){
+function crearHTMLpublicacionropa($id, $producto, $descripcion, $img){
 
-?>	
-		<div class="col-md-4">
+?>  
+    <div class="col-md-4">     
+
+
                           <img alt="ropa" id="prod_image" style="max-height: 200px; max-width: 200px;" src="<?= PATH_FILE . '/' .  $img  ?>" />
                               <dl class="mt-5">
                                 <dt>
@@ -135,7 +140,8 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
                                   <?= $descripcion ?>
                                 </dd>
                               </dl> 
-                           <?php
+
+                                <?php
                                   if ( !isset($_SESSION["usuario"]) ){
                                 ?>
                                 <div class="col-md-8">
@@ -169,14 +175,16 @@ function crearHTMLpublicacionropa($producto, $descripcion, $img){
                               
                           
                         </form>
+
                         <?php }
                     ?>
                     </div>
 
  <?php  }  ?>
 
- <?php
 
+
+ <?php
 function crearHTMLmisdonaciones($producto, $descripcion, $img){
 
 ?>	
