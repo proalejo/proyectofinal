@@ -12,7 +12,7 @@ include("nav.php")
   include_once PATH_DAOS . '/mispedidosDAO.php';
   include_once PATH_HELPERS .'/html_helper.php';
 
-
+  
 
 
                     $pedidos = buscarPedidosUsuario($_SESSION["id_usuario"]); 

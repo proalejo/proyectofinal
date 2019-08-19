@@ -14,7 +14,7 @@ include("nav.php")
 
                     while ($publicalimento = $alimento->fetch_assoc()){
 
-                      crearHTMLpublicacionalimento ( $publicalimento["id"], $publicalimento["producto"], $publicalimento["descripcion"], $publicalimento["img"]);
+                      crearHTMLpublicacionalimento ( $publicalimento["id"], $publicalimento["producto"], $publicalimento["descripcion"], $publicalimento["img"], $publicalimento["id_usuario"]);
 
                     }
                     ?>

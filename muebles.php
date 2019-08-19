@@ -14,7 +14,7 @@ include("nav.php")
 
                       while ($publicmueble = $mueble->fetch_assoc()){
 
-                      crearHTMLpublicacionmueble ( $publicmueble["id"], $publicmueble["producto"], $publicmueble["descripcion"], $publicmueble["img"]);
+                      crearHTMLpublicacionmueble ( $publicmueble["id"], $publicmueble["producto"], $publicmueble["descripcion"], $publicmueble["img"], $publicmueble["id_usuario"]);
                         }
                         ?>
 

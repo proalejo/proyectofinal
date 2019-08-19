@@ -14,7 +14,7 @@ include("nav.php")
 
                     while ($publicropa = $ropa->fetch_assoc()){
 
-                    crearHTMLpublicacionropa ( $publicropa["id"], $publicropa["producto"], $publicropa["descripcion"], $publicropa["img"]);
+                    crearHTMLpublicacionropa ( $publicropa["id"], $publicropa["producto"], $publicropa["descripcion"], $publicropa["img"], $publicropa["id_usuario"]);
 
                     }
                     ?>
